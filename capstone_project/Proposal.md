@@ -1,30 +1,42 @@
-# Proposal for Capstone Projects around Information Security DataSets
+Analysis of Passwords exposed in multiple Data Breach - LinkedIn, Yahoo.***
 
-***Idea 1 : Analysis of Verizon Community Database to analyze trends in cyber security incidents.***
+Large file containing 1.4 billion clear text credentials (breachcompilation.zip) were leaked in the public. 
 
-The Verizon Data Breach Investigations Report (DBIR)  brings together the collective experience of 65 organizations to give you the full picture on cybercrime each year. The report publishes key insights into trends of security incidents and industries targetted etc. Analyze the data to understand the trend over the year.
-  - Incidents trend pattern over the year
-	- Attacks vectors trends.
-	- Any other incident characteristics which could have prevented the trend.
-	- Visualizing the patterns.
-
-**Dataset:** https://github.com/vz-risk/VCDB
-
-***Idea 2: Analysis of various Data Breach over the decade.***
-
-Privacyrights publishes updated data about any published data breach incidents along with several chars including size of records, year, type of organization targetted inluding company involved. Analyze the trends to get general sense.
--Size of records vs type of organization targetted.
--Trend over the year.
-- Visualizing the information using python libraries based on no of records leaked.
-
-**Dataset:** https://www.privacyrights.org/data-breaches?title=
-
-***Idea 3: Analysis of Passwords exposed in multiple Data Breach - LinkedIn, Yahoo.***
-
-Large file containing 1.4 billion credentials (breachcompilation.zip) were leaked in the public. Cleaning up the datasets by removing personal details and do analysis on password trends to answer various questions.
--Password complexity usage including length, special chars, alpha numeric, char frequency.
+Problem Statement: 
+Cleaning up the datasets by removing personal details and do analysis on password trends to answer various questions.
+-Password complexity usage including length, special chars, alpha numeric, char frequency across various domains.
 -Degree of randomness in password.
 -Various trends on selecting passwords such as dictionary chars, movie names, superheroes
 -Based on trend calculate avg time to crack if specific method is used for brute-forcing such as dictionary wordlists.
 
-**Dataset:** https://gist.github.com/scottlinux/9a3b11257ac575e4f71de811322ce6b3
+Data Acquisition:
+Dataset was acquired by below pastebin links which points to Magent links to download torrent link whose total size is around 41 GB.
+Dataset download: 
+https://pastebin.com/R8Aj8Ncq
+		○ https://medium.com/4iqdelvedeep/1-4-billion-clear-text-credentials-discovered-in-a-single-database-3131d0a1ae14  
+		○ https://www.reddit.com/r/pwned/comments/7hhqfo/combination_of_many_breaches/ 
+
+Link to dataset with only passwords without Email IDs: https://gist.github.com/scottlinux/9a3b11257ac575e4f71de811322ce6b3
+
+Statistical Analysis:
+	• No of duplicate Records
+	• No of unique Passwords
+	• No of domains involved - corporate vs public domains. Domains per Countries.
+	• Same userid with different domains but same passwords.
+
+Visualizations:
+	• Distribution of datasets.
+	• Histogram on length of passwords.
+	• AlphaNumericSpecialChar Frequency.
+
+Pattern Analysis:
+	• Username substring as passwords.
+	• Common words which are substring of passwords.
+	• Password Walking - passwords containing letters, numbers, symbols close to each other on keyboard
+	• Patterns about brands, music, movies, superheroes, love, hate. sports, stars etc.
+	
+	• Likelihood of Passwords being in the Dataset ?
+	• Password Sentiment Analysis
+	• Degree of randomness (?)
+	• Password similarity -lexical analysis
+	• Password Complexity classification and publishing final results of the dataset.
